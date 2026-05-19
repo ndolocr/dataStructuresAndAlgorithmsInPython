@@ -2,21 +2,36 @@ from DoublyLinkedList.Node import Node
 
 class DoublyLinkedList:
     def __init__(self, value):
-        new_node = Node(5)
+        new_node = Node(value)
         self.head = new_node
         self.tail = new_node
+
+
+    def append(self, value):
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            new_node.previous = self.tail
+            self.tail = new_node
+
+    def preappend(self, value):
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+            self.tail = new_node
+        else:            
+            new_node.next = self.head
+            new_node.previous = None
+            self.head.previous = new_node
+            self.head = new_node
 
     def print_linked_list(self):
         temp = self.head
         
-        # print("None", end="→")
         while temp:
-            if temp is self.tail:
-                print(f"None ← ({temp.value}) → None")
-            else:
-                print("None ", end=" ← ")
-                if temp.next is None:
-                    print(f"({temp.value})", end=" → ")
-                else:
-                    print(f"({temp.value})", end=" ⇄ ")
+            print(temp.value, end=" ⇄ ")
             temp = temp.next
+        print("None")
