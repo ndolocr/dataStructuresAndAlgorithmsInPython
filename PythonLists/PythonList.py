@@ -15,5 +15,11 @@ class PythonListClass:
         """
         return self.my_list.append(value)
     
+    def list_insert(self, index, value):
+        return self.my_list.insert(index, value)
+    
+    def list_extend(self, list_items):
+        return self.my_list.extend(list_items)
+    
     def print_full_list(self):
         print(self.my_list)
