@@ -39,7 +39,7 @@ def main():
     print("Inserting New Node at index 1")
     singly_linked_list.insert_value(1, "i")
     print()
-    
+
     print("Print List after updating node")
     singly_linked_list.print_linked_list()
     print()
@@ -73,6 +73,10 @@ def main():
 
     print("Update Value at index 1")
     doubly_linked_list.change_node_value_by_index(1, "n")
+    print()
+
+    print("Inserting New Node at index 1")
+    doubly_linked_list.insert_value(1, "x")
     print()
 
     print("Print List after updating node")

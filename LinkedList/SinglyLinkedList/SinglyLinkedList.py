@@ -56,7 +56,7 @@ class SinglyLinkedList:
     def change_node_value_by_index(self, index, value):
         temp = self.head
         if index < 0 or index > SinglyLinkedList.length:
-            print("Invalid index used to get a node")
+            c
             return
         for _ in range(index):
             temp = temp.next
@@ -68,7 +68,8 @@ class SinglyLinkedList:
         prev = None
         temp = self.head
 
-        if index < 0 or index > SinglyLinkedList.length:            
+        if index < 0 or index > SinglyLinkedList.length:
+            print("Invalid index used to get a node")
             return None
         # Previous to point to current node.
         for _ in range(index):
