@@ -36,7 +36,7 @@ def main():
     singly_linked_list.change_node_value_by_index(1, "n")
     print()
 
-    print("Print List Popping tail")
+    print("Print List after updating node")
     singly_linked_list.print_linked_list()
     print()
 
@@ -67,7 +67,13 @@ def main():
     print()
 
 
-    
+    print("Update Value at index 1")
+    doubly_linked_list.change_node_value_by_index(1, "n")
+    print()
+
+    print("Print List after updating node")
+    doubly_linked_list.print_linked_list()
+    print()
 
 if __name__ == "__main__":
     main()

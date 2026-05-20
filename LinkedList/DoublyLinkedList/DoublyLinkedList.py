@@ -57,7 +57,19 @@ class DoublyLinkedList:
         print(f"The Value at index {index} is {temp.value}")
         return temp
     
-    
+
+    def change_node_value_by_index(self, index, value):
+        temp = self.head
+        if index < 0 or index > DoublyLinkedList.length:
+            print("Invalid index used to get a node")
+            return None
+        for _ in range(index):
+            temp = temp.next
+        old_value = temp.value
+        temp.value = value
+        print(f"The current value at index {index} is {old_value}, the updated value is {temp.value}")
+
+
     def print_linked_list(self):
         temp = self.head
         
