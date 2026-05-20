@@ -92,7 +92,21 @@ class SinglyLinkedList:
             temp = temp.next
         prev.next = temp.next
         temp.next = None
+
+    
+    def reverse_list(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
         
+        before = None
+        after = temp.next
+        while temp is not None:
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
+            
     def print_linked_list(self):
         temp = self.head
 

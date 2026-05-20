@@ -22,6 +22,24 @@ def main():
     singly_linked_list.print_linked_list()
     print()
 
+    print("Pre-append the value 4 in the linked list")
+    singly_linked_list.preappend(4)
+    print("Print List after pre-appending 5")
+    singly_linked_list.print_linked_list()
+    print()
+
+    print("Pre-append the value 3 in the linked list")
+    singly_linked_list.preappend(3)
+    print("Print List after pre-appending 5")
+    singly_linked_list.print_linked_list()
+    print()
+
+    print("Pre-append the value 2 in the linked list")
+    singly_linked_list.preappend(2)
+    print("Print List after pre-appending 5")
+    singly_linked_list.print_linked_list()
+    print()
+
     print("POP the linked list")
     singly_linked_list.pop()
     print("Print List Popping tail")
@@ -49,6 +67,14 @@ def main():
     print()
 
     print("Print List after updating node")
+    singly_linked_list.print_linked_list()
+    print()
+
+    print("Reverse the Linked List")
+    singly_linked_list.reverse_list()
+    print()
+
+    print("Print List after reversing Linked List")
     singly_linked_list.print_linked_list()
     print()
 
