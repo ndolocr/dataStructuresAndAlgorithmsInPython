@@ -28,6 +28,20 @@ class DoublyLinkedList:
             self.head.previous = new_node
             self.head = new_node
 
+    def pop(self):        
+        if not self.head:
+            return None
+        elif self.head is self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            temp = self.tail
+            self.tail = self.tail.previous
+
+            self.tail.next = None
+            temp.previous = None
+
+
     def print_linked_list(self):
         temp = self.head
         

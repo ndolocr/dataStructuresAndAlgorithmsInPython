@@ -26,7 +26,16 @@ class SinglyLinkedList:
             new_node.next = self.head
             self.head = new_node
 
-    
+    def pop(self):
+        temp = self.head
+        pre = None
+
+        while temp.next is not None:
+            pre = temp
+            temp = temp.next
+        self.tail = pre
+        pre.next = None
+        
     def print_linked_list(self):
         temp = self.head
 

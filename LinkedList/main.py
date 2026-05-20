@@ -16,9 +16,15 @@ def main():
     singly_linked_list.print_linked_list()
     print()
 
-    print("Pre-ppend the value 5 in the linked list")
+    print("Pre-append the value 5 in the linked list")
     singly_linked_list.preappend(5)
     print("Print List after pre-appending 5")
+    singly_linked_list.print_linked_list()
+    print()
+
+    print("POP the linked list")
+    singly_linked_list.pop()
+    print("Print List Popping tail")
     singly_linked_list.print_linked_list()
     print()
 
