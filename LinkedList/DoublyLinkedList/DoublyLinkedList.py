@@ -70,6 +70,25 @@ class DoublyLinkedList:
         print(f"The current value at index {index} is {old_value}, the updated value is {temp.value}")
 
 
+    def insert_value(self, index, value):
+        prev = None
+        temp = self.head
+
+        if index < 0 or index > DoublyLinkedList.length:
+            print("Invalid index used to get a node")
+            return None
+        
+        for _ in range(index):
+            prev = temp
+            temp = temp.next
+        
+        new_node = Node(value)
+        new_node.next = temp
+        new_node.previous = prev
+
+        prev.next = new_node                
+        temp.previous = new_node
+
     def print_linked_list(self):
         temp = self.head
         
