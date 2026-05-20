@@ -89,6 +89,23 @@ class DoublyLinkedList:
         prev.next = new_node                
         temp.previous = new_node
 
+    def remove_node(self, index):
+        if index < 0 or index > DoublyLinkedList.length:
+            print("Invalid index used to get a node")
+            return None
+        prev = None
+        temp = self.head        
+        for _ in range(index):
+            prev = temp
+            temp = temp.next
+        
+        next_node = temp.next
+        prev.next = next_node
+        next_node.previous = prev
+
+
+        
+
     def print_linked_list(self):
         temp = self.head
         

@@ -43,7 +43,7 @@ def main():
     print("Print List after updating node")
     singly_linked_list.print_linked_list()
     print()
-    
+
     print("Remove New Node at index 2")
     singly_linked_list.remove_node(2)
     print()
@@ -85,6 +85,14 @@ def main():
 
     print("Inserting New Node at index 1")
     doubly_linked_list.insert_value(1, "x")
+    print()
+
+    print("Print List after updating node")
+    doubly_linked_list.print_linked_list()
+    print()
+
+    print("Remove New Node at index 2")
+    doubly_linked_list.remove_node(2)
     print()
 
     print("Print List after updating node")
