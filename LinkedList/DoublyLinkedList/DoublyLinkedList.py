@@ -1,10 +1,12 @@
 from DoublyLinkedList.Node import Node
 
 class DoublyLinkedList:
+    length = 0
     def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
         self.tail = new_node
+        DoublyLinkedList.length += 1
 
 
     def append(self, value):
@@ -16,6 +18,7 @@ class DoublyLinkedList:
             self.tail.next = new_node
             new_node.previous = self.tail
             self.tail = new_node
+        DoublyLinkedList.length += 1
 
     def preappend(self, value):
         new_node = Node(value)
@@ -27,6 +30,7 @@ class DoublyLinkedList:
             new_node.previous = None
             self.head.previous = new_node
             self.head = new_node
+        DoublyLinkedList.length += 1
 
     def pop(self):        
         if not self.head:
@@ -40,8 +44,20 @@ class DoublyLinkedList:
 
             self.tail.next = None
             temp.previous = None
+        DoublyLinkedList.length -= 1
 
 
+    def get_node_by_index(self, index):
+        temp = self.head
+        if index < 0 or index > DoublyLinkedList.length:
+            print("Invalid index used to get a node")
+            return None
+        for _ in range(index):
+            temp = temp.next
+        print(f"The Value at index {index} is {temp.value}")
+        return temp
+    
+    
     def print_linked_list(self):
         temp = self.head
         

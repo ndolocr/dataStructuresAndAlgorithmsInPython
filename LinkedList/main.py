@@ -54,6 +54,10 @@ def main():
     doubly_linked_list.print_linked_list()
     print()
 
+    print("Get Value at index 1")
+    doubly_linked_list.get_node_by_index(1)
+    print()
+
 
 if __name__ == "__main__":
     main()
