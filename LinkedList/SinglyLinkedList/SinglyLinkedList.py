@@ -79,6 +79,20 @@ class SinglyLinkedList:
         prev.next = new_node
         new_node.next = temp
 
+
+    def remove_node(self, index):
+        if index <0 or index > SinglyLinkedList.length:
+            print("Invalid index used to get a node")
+            return None
+        prev = None
+        temp = self.head
+
+        for _ in range(index):
+            prev = temp
+            temp = temp.next
+        prev.next = temp.next
+        temp.next = None
+        
     def print_linked_list(self):
         temp = self.head
 
