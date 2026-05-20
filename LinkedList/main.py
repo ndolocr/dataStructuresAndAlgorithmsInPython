@@ -32,6 +32,14 @@ def main():
     singly_linked_list.get_by_index(1)
     print()
 
+    print("Update Value at index 1")
+    singly_linked_list.change_node_value_by_index(1, "n")
+    print()
+
+    print("Print List Popping tail")
+    singly_linked_list.print_linked_list()
+    print()
+
     ## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     print("-"*150) 
     print("DOUBLY LIKNED LIST")
@@ -58,6 +66,8 @@ def main():
     doubly_linked_list.get_node_by_index(1)
     print()
 
+
+    
 
 if __name__ == "__main__":
     main()
