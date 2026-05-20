@@ -28,6 +28,10 @@ def main():
     singly_linked_list.print_linked_list()
     print()
 
+    print("Get Value at index 1")
+    singly_linked_list.get_by_index(1)
+    print()
+
     ## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     print("-"*150) 
     print("DOUBLY LIKNED LIST")
