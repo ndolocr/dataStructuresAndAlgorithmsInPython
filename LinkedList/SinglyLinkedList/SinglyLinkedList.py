@@ -64,6 +64,20 @@ class SinglyLinkedList:
         temp.value = value
         print(f"The current value at index {index} is {old_value}, the updated value is {temp.value}")
     
+    def insert_value(self, index, value):
+        prev = None
+        temp = self.head
+
+        if index < 0 or index > SinglyLinkedList.length:            
+            return None
+        # Previous to point to current node.
+        for _ in range(index):
+            prev = temp
+            temp = temp.next
+        new_node = Node(value)
+        prev.next = new_node
+        new_node.next = temp
+
     def print_linked_list(self):
         temp = self.head
 
