@@ -47,6 +47,23 @@ class DoublyLinkedList:
             DoublyLinkedList.length -= 1
             return temp
         
+        self.tail = self.tail.prev
+        self.tail.next = None
+        temp.prev = None
+        DoublyLinkedList.length -= 1
+        return temp
+
+    
+    def pop_old(self):
+        if self.head is None:
+            return None
+        temp = self.head
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+            DoublyLinkedList.length -= 1
+            return temp
+        
         previous_node = None
         current_node = self.head
 
